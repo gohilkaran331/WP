@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recipe Sharing Site</title>
+	<link rel="stylesheet" type="text/css" href="styles1.css">
+</head>
+<body>
+	<main>
+		<section id="add-recipe-form">
+			<h2>Add Recipe</h2>
+			<form id="new-recipe-form">
+				<input type="text" id="recipe-name" placeholder="Recipe Name" required>
+				<textarea id="recipe-ingredients" placeholder="Ingredients" required></textarea>
+				<textarea id="recipe-instructions" placeholder="Instructions" required></textarea>
+				<input type="file" id="recipe-photo" accept="image/*" required>
+				<label for="recipe-photo" class="button-style">Add Photo</label>
+				<button type="submit">Add Recipe</button>
+			</form>
+		</section>
+		<section id="recipe-list">
+			<h2>Recipe List</h2>
+			<ul id="recipes-ul">
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2024 Recipe Sharing Site</p>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

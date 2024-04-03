@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Recipes</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function colr(event) {
+            // Remove the active class from all the links
+            var links = document.getElementsByTagName("a");
+            for (var i = 0; i < links.length; i++) {
+                links[i].classList.remove("active");
+            }
+            // Add the active class to the clicked link
+            event.target.classList.add("active");
+        }
+
+        function searchRecipe() {
+            var query = document.getElementById("search-query").value;
+            // Do something with the recipe query
+            console.log("You searched for " + query);
+        }
+    </script>
+    <style>
+        #search-form {
+            position: relative;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        #search-input-container {
+            display: inline-block;
+            width: calc(100% - 140px); /* Adjust as necessary */
+            margin-right: 10px; /* Add margin here */
+        }
+
+        #search-query {
+            width: calc(100% - 10px); /* Adjust padding */
+            padding: 10px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+
+        .submit-button {
+            display: inline-block;
+            width: 100px; /* Adjust as necessary */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2 align="center">Search Recipes</h2>
+        <form id="search-form" onsubmit="searchRecipe(); return false;">
+            <div id="search-input-container">
+                <input type="text" id="search-query" placeholder="Search Recipes" required>
+            </div>
+            <button type="submit" class="submit-button">Search</button>
+        </form>
+    </section>
+</body>
+</html>
